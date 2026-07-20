@@ -18,7 +18,7 @@
   <meta property="og:title" content="HarmoLight: Multimodal-Guided Diffusion for Composite Image Lighting Adaptation">
   <meta property="og:description" content="A multimodal-guided diffusion model for composite image lighting adaptation via curriculum lighting learning.">
   <meta property="og:url" content="https://YOUR_DOMAIN.com/harmolight">
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image" content="static/images/teaser_01.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="HarmoLight - Research Preview">
@@ -32,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HarmoLight: Multimodal-Guided Diffusion for Composite Image Lighting Adaptation">
   <meta name="twitter:description" content="A multimodal-guided diffusion model for composite image lighting adaptation via curriculum lighting learning.">
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image" content="static/images/teaser_01.png">
   <meta name="twitter:image:alt" content="HarmoLight - Research Preview">
 
   <!-- Academic/Research Specific -->
@@ -95,46 +95,11 @@
   <script defer src="static/js/index.js"></script>
 
   <style>
-    .img-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .result-image {
       width: 100%;
-      min-height: 280px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #e8eef7 0%, #f4f6fa 50%, #e6edf5 100%);
-      border: 1px dashed #94a3b8;
-      color: #475569;
-      text-align: center;
-      padding: 1.5rem;
-      box-sizing: border-box;
-    }
-    .img-placeholder .ph-inner {
-      max-width: 28rem;
-    }
-    .img-placeholder .ph-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #64748b;
-      margin-bottom: 0.5rem;
-    }
-    .img-placeholder .ph-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #1e293b;
-      margin-bottom: 0.4rem;
-    }
-    .img-placeholder .ph-desc {
-      font-size: 0.9rem;
-      line-height: 1.45;
-      color: #64748b;
-      margin: 0;
-    }
-    .img-placeholder.wide {
-      min-height: 320px;
+      height: auto;
+      border-radius: 6px;
+      display: block;
     }
   </style>
 
@@ -242,17 +207,11 @@
 </div>
 </section>
 
-<!-- Teaser placeholder -->
+<!-- Teaser -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="img-placeholder wide" role="img" aria-label="Teaser figure placeholder">
-        <div class="ph-inner">
-          <div class="ph-label">Figure Placeholder</div>
-          <div class="ph-title">Teaser / Qualitative Overview</div>
-          <p class="ph-desc">Given a foreground subject and a target background, HarmoLight relights the composited foreground to match the illumination of the new scene under both colorful and natural lighting conditions.</p>
-        </div>
-      </div>
+      <img class="result-image" src="static/images/teaser_01.png" alt="HarmoLight teaser: composite image lighting adaptation results" loading="eager"/>
       <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
         HarmoLight adapts the lighting of a composited foreground to harmonize with the target background while preserving content fidelity.
       </h2>
@@ -292,13 +251,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Method Overview</h2>
-        <div class="img-placeholder wide" role="img" aria-label="Pipeline figure placeholder">
-          <div class="ph-inner">
-            <div class="ph-label">Figure Placeholder</div>
-            <div class="ph-title">HarmoLight Pipeline</div>
-            <p class="ph-desc">Lighting representation distillation + multimodal-guided diffusion with decoupled content/lighting prompts and curriculum difficulty embedding (CDE).</p>
-          </div>
-        </div>
+        <img class="result-image" src="static/images/pipeline_01.png" alt="Overview of the HarmoLight pipeline" loading="lazy"/>
         <div class="content has-text-justified" style="margin-top: 1.25rem;">
           <p>
             HarmoLight builds on a diffusion backbone and injects disentangled multimodal conditions:
@@ -313,56 +266,32 @@
 </section>
 <!-- End method overview -->
 
-<!-- Image carousel with placeholders -->
+<!-- Image carousel -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Visual Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
-          <div class="img-placeholder" role="img" aria-label="Rendered object results placeholder">
-            <div class="ph-inner">
-              <div class="ph-label">Placeholder</div>
-              <div class="ph-title">Rendered Object Test Set</div>
-              <p class="ph-desc">Qualitative comparisons on the rendered object dataset.</p>
-            </div>
-          </div>
+          <img class="result-image" src="static/images/object_01.png" alt="Qualitative comparisons on the rendered object test set" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             Comparisons on the rendered object test set.
           </h2>
         </div>
         <div class="item">
-          <div class="img-placeholder" role="img" aria-label="Synthetic results placeholder">
-            <div class="ph-inner">
-              <div class="ph-label">Placeholder</div>
-              <div class="ph-title">Synthetic Test Set</div>
-              <p class="ph-desc">Qualitative comparisons on the synthetic dataset.</p>
-            </div>
-          </div>
+          <img class="result-image" src="static/images/synthetic_01.png" alt="Qualitative comparisons on the synthetic test set" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             Comparisons on the synthetic test set.
           </h2>
         </div>
         <div class="item">
-          <div class="img-placeholder" role="img" aria-label="In-the-wild results placeholder">
-            <div class="ph-inner">
-              <div class="ph-label">Placeholder</div>
-              <div class="ph-title">In-the-Wild Results</div>
-              <p class="ph-desc">Qualitative comparisons on real-world composite images.</p>
-            </div>
-          </div>
+          <img class="result-image" src="static/images/in_the_wild_01.png" alt="Qualitative comparisons on in-the-wild images" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             Comparisons on in-the-wild images.
           </h2>
         </div>
         <div class="item">
-          <div class="img-placeholder" role="img" aria-label="Data construction placeholder">
-            <div class="ph-inner">
-              <div class="ph-label">Placeholder</div>
-              <div class="ph-title">Relighting Pair Construction</div>
-              <p class="ph-desc">Filtered / delighted / relighted curriculum data pairs.</p>
-            </div>
-          </div>
+          <img class="result-image" src="static/images/data_01.png" alt="Curriculum-based relighting data construction pipeline" loading="lazy"/>
           <h2 class="subtitle has-text-centered">
             Curriculum-based relighting data construction.
           </h2>
